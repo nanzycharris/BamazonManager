@@ -151,10 +151,8 @@ function showProducts() {
 // Gets all departments, then obtain new book info, and insert the new book title into our bookstore database
 function addANewProduct() {
     // console.log("inside addANewProduct")
-    getDepartments(function (err, departments) {
-        getProductInfo(departments).then(insertNewProduct);
-    });
-}
+    getProductInfo(departments).then(insertNewProduct);
+};
 
 // Prompts manager for new product info, then adds new item
 function getProductInfo(departments) {
